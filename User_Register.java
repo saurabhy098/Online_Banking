@@ -1,9 +1,30 @@
 package com.lti.bean;
 
-public class User_Register {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="USER_REGISTER")
+public class User_Register implements Serializable {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@Column(name = "ACCOUNT_NO")
 	private long account_no;
+	
+	@Column(name="USER_ID",nullable=false)
 	private String user_id;
+	
+	@Column(name="USER_PASSWORD",nullable=false)
 	private String user_password;
+	
+	@Column(name="TRANSACTION_PASSWORD",nullable=false)
 	private int transaction_password;
 	
 	public long getAccount_no() {
