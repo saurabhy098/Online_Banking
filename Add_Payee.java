@@ -1,5 +1,4 @@
 package com.lti.bean;
-
 public class Add_Payee {
 private String nick_name;
 private String receiver_name;
